@@ -7,7 +7,7 @@ services:
       - DB_HOST=db
       - DB_PORT=5432
       - DB_USERNAME=postgres
-      - DB_PASSWORD=postgres
+      - DB_PASSWORD=ваш пароль
       - DB_NAME=auth
       - SSL_MODE=disable
     depends_on:
@@ -20,7 +20,7 @@ services:
     image: postgres:13-alpine
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: ваш пароль
       POSTGRES_DB: auth
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
